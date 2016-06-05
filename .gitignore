@@ -1,0 +1,17 @@
+*.swp
+*.swn
+*.swo
+*.bak
+*~
+*.un~
+*.DS_Store
+*.out
+[#]*[#]
+
+node_modules/
+npm-debug.log
+
+logs/forever/
+logs/server.log
+
+public/vendor/

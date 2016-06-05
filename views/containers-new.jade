@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+  form.pure-form.pure-form-stacked(method='post',action='/containers/create')
+    fieldset
+
+      label(for='ctid') Container Id
+      input#ctid(name='ctid',type='text',value=nextCtid,readonly)
+
+      label(for='template') Template
+      select#template(name='template')
+        each t in templates
+          option(value=t) #{t}
+
+      label(for='ip') IP Address
+      select#ip(name='ip')
+        each ip in ips
+          option(value=ip) #{ip}
+
+      label(for='hostname') Hostname
+      input#hostname(name='hostname',type='text',placeholder='my-test-container')
+
+      label(for='rootpwd') Root password
+      input#rootpwd(name='rootpwd',type='password',placeholder='default-is-secret')
+
+      button.pure-button.pure-button-primary(type='submit') Create

@@ -1,0 +1,104 @@
+extends layout
+
+block content
+
+  div.platform-container.pure-g
+    div.pure-u-1.pure-u-md-1-5
+      div.platform-name.lamp Lamp
+    div.pure-u-1.pure-u-md-1-2
+      p 
+        | Basic LAMP stack
+        br
+        | Ubuntu 12.04, Apache 2.2, MySql 5.5 and PHP 5.3. 
+    div.pure-u-1.pure-u-md-1-5.platform-create
+      form(method='post',action='/platforms/create/lamp')
+        button.pure-button.pure-button-primary(type='submit') Create
+
+  hr
+
+  div.platform-container.pure-g
+    div.pure-u-1.pure-u-md-1-5
+      div.platform-name.lamp2 
+        | Lamp
+        sub 5.5
+    div.pure-u-1.pure-u-md-1-2
+      p 
+        | LAMP stack
+        br
+        | Ubuntu 14.04, Apache 2.4, MySql 5.5 and PHP 5.5. 
+    div.pure-u-1.pure-u-md-1-5.platform-create
+      form(method='post',action='/platforms/create/lamp55')
+        button.pure-button.pure-button-primary(type='submit') Create
+
+  hr
+
+  div.platform-container.pure-g
+    div.pure-u-1.pure-u-md-1-5
+      div.platform-name.wp WP
+    div.pure-u-1.pure-u-md-1-2
+      p 
+        | Wordpress
+        br
+        | Ubuntu 12.04, Apache 2.2, MySql 5.5, PHP 5.3 and Wordpress 4.2.
+    div.pure-u-1.pure-u-md-1-5.platform-create
+      form(method='post',action='/platforms/create/wp')
+        button.pure-button.pure-button-primary(type='submit') Create
+
+  hr
+
+  div.platform-container.pure-g
+    div.pure-u-1.pure-u-md-1-5
+      div.platform-name.laravel Laravel
+    div.pure-u-1.pure-u-md-1-2
+      p 
+        | Laravel
+        br
+        | Ubuntu 14.04, Apache 2.4, MySql 5.5, PHP 5.5 and Laravel 5. 
+    div.pure-u-1.pure-u-md-1-5.platform-create
+      form(method='post',action='/platforms/create/laravel')
+        button.pure-button.pure-button-primary(type='submit') Create
+
+  hr
+
+  div.platform-container.pure-g
+    div.pure-u-1.pure-u-md-1-5
+      div.platform-name.rails Rails
+    div.pure-u-1.pure-u-md-1-2
+      p 
+        | Ruby on Rails
+        br
+        | Ubuntu 14.04, Ruby 2.2, SQLite 3.8 and Rails 4.2 (Node.js 0.10).
+        br
+        i Takes a while (~30min) to install ... 
+    div.pure-u-1.pure-u-md-1-5.platform-create
+      form(method='post',action='/platforms/create/rails')
+        button.pure-button.pure-button-primary(type='submit') Create
+
+  hr
+
+  div.platform-container.pure-g
+    div.pure-u-1.pure-u-md-1-5
+      div.platform-name.mean Mean
+    div.pure-u-1.pure-u-md-1-2
+      p 
+        | Mean stack
+        br
+        | Ubuntu 14.04, MongoDB 3.0 and Node.js 0.10.
+    div.pure-u-1.pure-u-md-1-5.platform-create
+      form(method='post',action='/platforms/create/mean')
+        button.pure-button.pure-button-primary(type='submit') Create
+
+  hr
+
+  div.platform-container.pure-g
+    div.pure-u-1.pure-u-md-1-5
+      div.platform-name.lemp Lemp
+    div.pure-u-1.pure-u-md-1-2
+      p 
+        | LEMP stack
+        br
+        | Ubuntu 14.04, Nginx 1.4, MySql 5.5 and PHP 5.5. 
+    div.pure-u-1.pure-u-md-1-5.platform-create
+      form(method='post',action='/platforms/create/lemp')
+        button.pure-button.pure-button-primary(type='submit') Create
+

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  if templates.length
+    table.pure-table
+      thead
+        tr
+          th #
+          th Name
+      tbody
+        each t, index in templates
+          - var i = parseInt(index, 10) + 1
+          tr
+            td #{i}
+            td #{t}
+  else
+    p.error No templates found
+

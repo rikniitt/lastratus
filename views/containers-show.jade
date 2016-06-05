@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  if config
+    h1.content-subhead Container #{id} config
+
+    section
+
+      dl
+        each val, index in config
+          dt #{index}
+          dd #{val}
+        
+  
+    section
+      a.pure-button(href='/containers')
+        i.fa.fa-arrow-left &nbsp;Back
+
+      a.pure-button(href='https://openvz.org/User_Guide/Operations_on_Containers' target='_blank')
+        i.fa.fa-question-circle &nbsp;Doc
+
+  else
+    p.error No config file found
+

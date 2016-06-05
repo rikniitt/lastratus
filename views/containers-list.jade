@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  if containers.length
+
+    each c, index in containers
+
+      div.cnt-container
+        h1.content-subhead #{c.ctid} #{c.hostname}
+        case c.status
+          when 'running'
+            div.cnt-status.cnt-running R
+          default
+            div.cnt-status.cnt-stopped S
+        section
+          p
+            dl
+              dt 
+                i.fa.fa-sitemap
+                | &nbsp; IP address
+              dd 
+                | #{c.ip} &nbsp;
+                a(href=('http://' + c.ip), target='_blank')
+                  i.fa.fa-external-link
+
+              dt 
+                i.fa.fa-toggle-on
+                | &nbsp; Status
+              dd #{c.status}
+
+              dt.ssh 
+                i.fa.fa-tty
+                | &nbsp; SSH
+              dd.ssh-input
+               input(type='text', value='ssh root@' + c.ip, disabled)
+               button.pure-button.button-small.clipboard
+                 i.fa.fa-clipboard
+          p
+            a.pure-button(href='/containers/start/' + c.ctid) Start
+            a.pure-button(href='/containers/stop/' + c.ctid) Stop
+            a.pure-button(href='/containers/restart/' + c.ctid) Restart
+            &nbsp; &nbsp;
+            a.pure-button(href='/containers/show/' + c.ctid) Show config
+
+      - notLast = (index !== containers.length - 1)
+      if notLast
+        hr
+
+  else
+    p.error No containers found
+

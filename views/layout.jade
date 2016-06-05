@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title= Lastratus
+    link(rel='stylesheet', href='/vendor/pure/pure-min.css')
+    link(rel='stylesheet', href='/vendor/pure/grids-responsive-min.css')
+    link(rel='stylesheet', href='/vendor/pure/forms-min.css')
+    link(rel='stylesheet', href='/vendor/pure/buttons-core-min.css')
+    link(rel='stylesheet', href='/vendor/pure/buttons-min.css')
+    link(rel='stylesheet', href='/vendor/fontawesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+
+    div.pure-g#layout
+
+      div.sidebar.pure-u-1.pure-u-md-1-4
+        div.header
+          h1.brand-title Lastratus
+          
+          h2.brand-tagline Manage & configure containers
+
+          nav.nav
+            ul.nav-list
+              li.nav-item
+                a.pure-button(href='/containers') List
+              li.nav-item
+                a.pure-button(href='/containers/new') New
+              br
+              li.nav-item
+                a.pure-button(href='/configure') Configure
+              li.nav-item
+                a.pure-button(href='/platforms') Platforms
+
+      div.content.pure-u-1.pure-u-md-3-4
+        div 
+          block content
+
+        div.footer
+          div.pure-menu.pure-menu-horizontal
+            ul
+              li.pure-menu-item
+                a.pure-menu-link(href='/containers') List containers
+              li.pure-menu-item
+                a.pure-menu-link(href='/containers/new') New container
+              li.pure-menu-item
+                a.pure-menu-link(href='/configure') Configure containers
+              li.pure-menu-item
+                a.pure-menu-link(href='/platforms') Containers as platforms
+              li.pure-menu-item
+                a.pure-menu-link(href='/templates') Container templates
+              li.pure-menu-item
+                a.pure-menu-link(href='/about') About
+
+    script(src='/vendor/jquery/dist/jquery.min.js')
+    script(src='/javascripts/scripts.js')

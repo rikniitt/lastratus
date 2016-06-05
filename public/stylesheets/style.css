@@ -1,0 +1,271 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(61, 146, 201);
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+/* LAYOUT CSS */
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+#layout {
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
+
+.sidebar {
+    background: rgb(61, 79, 93);
+    background-image: linear-gradient(rgb(61, 79, 93), rgb(16, 97, 39));
+    color: #fff;
+}
+
+hr {
+    background-color: lightgrey;
+    border: none;
+    border-radius: 4px;
+    height: 1px;
+    margin: 10px 0 20px 0;
+}
+
+p.intro {
+    font-size: smaller;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    text-transform: uppercase;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: rgb(176, 202, 219);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.nav-item a {
+    background: transparent;
+    border: 2px solid rgb(176, 202, 219);
+    color: #fff;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 2px solid rgb(61, 146, 201);
+    text-decoration: none;
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 1em 0;
+}
+
+.cnt-status {
+    float: right;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.cnt-container {
+    margin-bottom: 50px;
+}
+
+dl {
+    font-size: smaller;
+}
+dt {
+    font-weight: bold;
+}
+dt.ssh {
+    cursor: pointer;
+}
+dd.ssh-input {
+    display: none;
+}
+dd.ssh-input input {
+    font-size: 95%;
+}
+
+.footer {
+    padding: 1em 0;
+}
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+
+.button-xsmall {
+    font-size: 40%;
+}
+.button-small {
+    font-size: 85%;
+}
+.button-large {
+    font-size: 110%;
+}
+.button-xlarge {
+    font-size: 125%;
+}
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-success,
+.cnt-running {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+.button-error,
+.cnt-stopped {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+
+.platform-container {
+    margin: 25px 0;
+}
+.platform-name {
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.platform-name sub {
+    font-size: .5em;
+}
+.lamp {
+    background-color: rgb(61, 79, 93);
+    font-size: 1.5em;
+}
+.wp {
+    background-color: rgb(16, 97, 39);
+    font-size: 2.5em;
+}
+.lamp2 {
+    background-color: rgb(93, 79, 61);
+    font-size: 1.5em;
+}
+.laravel {
+    background-color: rgb(97, 16, 93);
+    font-size: 1em;
+}
+.rails {
+    background-color: rgb(97, 93, 16);
+    font-size: 1.5em;
+}
+.mean {
+    background-color: rgb(39, 79, 16);
+    font-size: 1.5em;
+}
+.lemp {
+    background-color: rgb(30, 35, 45);
+    font-size: 1.5em;
+}
+.platform-container p i {
+    font-size: smaller;
+    color: grey;
+}
+.platform-create {
+    height: 100px;
+    line-height: 100px;
+}
+
+.md code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #0d0d0d;
+    color: limegreen;
+    display: inline-block;
+    width: auto;
+    padding: 3px;
+    border-radius: 4px;
+    hyphens:auto;
+    word-wrap:break-word;
+}
+
+.md em {
+    font-weight: bold;
+}

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  
+  form.pure-form.pure-form-stacked(method='post',action='/configure/run')
+    fieldset
+
+      label(for='ctid') Container
+      select#ctid(name='ctid')
+        each c in containers
+          option(value=c.ctid) #{c.hostname}
+
+      label(for='confscript') Configuration script
+      select#confscript(name='confscript')
+        each s in scripts
+          option(value=s) #{s}
+
+
+      button.pure-button.pure-button-primary(type='submit') Run
