@@ -24,6 +24,8 @@ chown -R $APACHE_USER:$APACHE_USER wordpress
 cp /etc/apache2/sites-available/default /etc/apache2/sites-available/wordpress
 # Use sed to change default /var/www to point new created dir
 sed -i -e 's/var\/www/www_document_root\/wordpress/g' /etc/apache2/sites-available/wordpress
+# Allow override (mod rewrite)
+sed -i -e 's/AllowOverride\ None/AllowOverride\ All/g' /etc/apache2/sites-available/wordpress
 # Enable and disable virtual hosts
 a2dissite default && sudo a2ensite wordpress && sudo service apache2 reload
 
